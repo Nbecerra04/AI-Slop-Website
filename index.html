@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Constitution Gardens | Washington, DC</title>
+<meta name="description" content="Fifty quiet acres on the National Mall: a lake, willows, and the Memorial to the 56 Signers of the Declaration of Independence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2ec;--ink:#1c2a26;--mute:#54655f;--lake:#1f5c63;--deep:#123a40;--willow:#a9c46c;--granite:#c9cdc8;--card:#fff;
+--serif:"Fraunces",Georgia,serif;--sans:"Figtree",system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1917;--ink:#e6eee9;--mute:#9db0a8;--lake:#6fb3ba;--deep:#0a1f22;--granite:#2a3834;--card:#16241f}}
+:root[data-theme="dark"]{--bg:#0f1917;--ink:#e6eee9;--mute:#9db0a8;--lake:#6fb3ba;--deep:#0a1f22;--granite:#2a3834;--card:#16241f}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--sans)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--willow);outline-offset:3px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.8rem clamp(1rem,5vw,3rem);background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--granite)}
+nav b{font:600 1.05rem var(--serif)}
+nav div{display:flex;gap:1.2rem;font-size:.95rem;font-weight:500;overflow-x:auto}
+nav a{text-decoration:none;color:var(--mute);white-space:nowrap}nav a:hover{color:var(--ink)}
+.hero{position:relative;background:linear-gradient(#dbe9e2,#eef2ec 60%);overflow:hidden;padding:clamp(3rem,10vw,7rem) clamp(1rem,5vw,3rem) 0}
+.hero h1{font:800 clamp(3rem,10.5vw,8.5rem)/.92 var(--serif);letter-spacing:-.03em;margin:0;color:var(--deep);max-width:11ch}
+.hero p{max-width:34rem;font-size:1.2rem;margin:1.5rem 0 0;color:var(--ink)}
+.hero svg{display:block;width:100%;height:auto;margin-top:1rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:linear-gradient(#12302f,#0f1917 60%)}:root:not([data-theme="light"]) .hero h1{color:var(--ink)}}
+.ripple{transform-origin:center;transform-box:fill-box;animation:rip 7s ease-in-out infinite}
+.ripple:nth-of-type(2){animation-delay:2s}.ripple:nth-of-type(3){animation-delay:4s}
+@keyframes rip{0%,100%{transform:scaleX(.94);opacity:.5}50%{transform:scaleX(1.04);opacity:1}}
+@media (prefers-reduced-motion:reduce){.ripple{animation:none}html{scroll-behavior:auto}}
+section{padding:clamp(3rem,8vw,6rem) clamp(1rem,5vw,3rem);max-width:74rem;margin:0 auto}
+h2{font:600 clamp(1.9rem,4.5vw,3rem)/1.1 var(--serif);margin:0 0 1.2rem;letter-spacing:-.02em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.5rem,5vw,4rem);align-items:start}
+.facts{display:grid;gap:0;margin:0;border-top:2px solid var(--ink)}
+.facts div{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--granite)}
+.facts dt{color:var(--mute)}.facts dd{margin:0;font-weight:600;text-align:right}
+.band{background:var(--deep);color:#e6eee9;max-width:none;margin:0}
+.band>div{max-width:74rem;margin:0 auto}
+.band h2{color:#fff}.band p{color:#c9d8d2}
+.names{columns:2;column-gap:2rem;margin:1.5rem 0 0;padding:0;list-style:none;font:400 1.15rem/1.7 var(--serif);font-style:italic;color:#dfe9c8}
+.stones{display:flex;gap:.5rem;align-items:flex-end;margin-top:1.5rem}
+.stones i{flex:1;background:linear-gradient(#8a948f,#69736f);border-radius:2px 2px 0 0}
+.things{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.things article{background:var(--card);border-left:5px solid var(--lake);padding:1.2rem 1.3rem;border-radius:4px}
+.things article:nth-child(even){border-left-color:var(--willow)}
+.things h3{font:600 1.25rem var(--serif);margin:0 0 .4rem}.things p{margin:0;color:var(--mute);font-size:1rem}
+.near{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.near li{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--granite)}
+.near span{color:var(--mute);white-space:nowrap}
+.btn{display:inline-block;margin-top:1.2rem;padding:.8rem 1.4rem;background:var(--lake);color:#fff;font-weight:600;text-decoration:none;border-radius:999px}
+.btn:hover{background:var(--deep)}
+footer{border-top:1px solid var(--granite);padding:2rem clamp(1rem,5vw,3rem);color:var(--mute);font-size:.9rem;text-align:center}
+@media (max-width:760px){.two{grid-template-columns:1fr}.names{columns:1}}
+</style>
+</head>
+<body>
+<nav><b>Constitution Gardens</b><div><a href="#about">About</a><a href="#island">The Island</a><a href="#do">Things to do</a><a href="#visit">Visit</a></div></nav>
+
+<header class="hero">
+  <h1>Constitution Gardens</h1>
+  <p>Fifty quiet acres on the National Mall. Walk under willows, circle the lake, and cross to an island that honors the 56 signers of the Declaration of Independence.</p>
+  <svg viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" role="img" aria-label="Illustration of a lake with an island and weeping willows">
+    <path d="M0 150 Q300 110 600 140 T1200 120 V300 H0Z" fill="#b9d18a"/>
+    <path d="M0 190 Q300 150 620 180 T1200 165 V300 H0Z" fill="#1f5c63"/>
+    <g fill="none" stroke="#dcefe9" stroke-width="2" stroke-linecap="round">
+      <path class="ripple" d="M180 235 h230"/><path class="ripple" d="M700 255 h300"/><path class="ripple" d="M420 275 h200"/>
+    </g>
+    <ellipse cx="620" cy="190" rx="120" ry="16" fill="#7c9a4a"/>
+    <g fill="#8a948f"><rect x="560" y="166" width="14" height="22"/><rect x="580" y="160" width="14" height="28"/><rect x="600" y="164" width="14" height="24"/><rect x="620" y="158" width="14" height="30"/><rect x="640" y="164" width="14" height="24"/><rect x="660" y="168" width="14" height="20"/></g>
+    <g stroke="#6f8f3a" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M170 150 V70"/><path d="M1010 140 V60"/>
+    </g>
+    <g fill="none" stroke="#5f8a3a" stroke-width="2.5" stroke-linecap="round">
+      <path d="M170 75 C120 80 105 130 112 190 M170 75 C150 90 145 140 148 200 M170 75 C190 90 195 140 192 200 M170 75 C220 80 235 130 228 190"/>
+      <path d="M1010 65 C960 70 945 120 952 180 M1010 65 C990 80 985 130 988 190 M1010 65 C1030 80 1035 130 1032 190 M1010 65 C1060 70 1075 120 1068 180"/>
+    </g>
+  </svg>
+</header>
+
+<section id="about" class="two">
+  <div>
+    <h2>A park made to rest in</h2>
+    <p>Constitution Gardens sits between the Lincoln Memorial and the Washington Monument, just off Constitution Avenue. It opened in 1976 for the nation's bicentennial and was designed as a green pause in the middle of the Mall's monuments.</p>
+    <p>A wide loop path circles a lake of roughly six acres. Ducks, geese, and turtles share the water, and benches face the shore in every direction. It is one of the calmer places to eat lunch downtown.</p>
+  </div>
+  <dl class="facts">
+    <div><dt>Size</dt><dd>About 50 acres</dd></div>
+    <div><dt>Opened</dt><dd>1976</dd></div>
+    <div><dt>Hours</dt><dd>Open daily, all day</dd></div>
+    <div><dt>Cost</dt><dd>Free</dd></div>
+    <div><dt>Run by</dt><dd>National Park Service</dd></div>
+  </dl>
+</section>
+
+<section id="island" class="band">
+  <div>
+    <h2>The island of signatures</h2>
+    <p>A footbridge leads to a small island in the lake. There, 56 granite blocks carry the names and signatures of the men who signed the Declaration of Independence in 1776. The memorial was dedicated in 1984. Read them slowly; the handwriting is the point.</p>
+    <ul class="names" aria-label="A few of the signers"><li>John Hancock</li><li>Benjamin Franklin</li><li>Thomas Jefferson</li><li>John Adams</li><li>Charles Carroll</li><li>Button Gwinnett</li></ul>
+    <div class="stones" aria-hidden="true"><i style="height:38px"></i><i style="height:52px"></i><i style="height:44px"></i><i style="height:60px"></i><i style="height:46px"></i><i style="height:54px"></i><i style="height:40px"></i></div>
+  </div>
+</section>
+
+<section id="do">
+  <h2>What to do here</h2>
+  <div class="things">
+    <article><h3>Walk the loop</h3><p>The lake path is flat and easy, about a mile with the detours. Good for strollers and wheelchairs.</p></article>
+    <article><h3>Feed your eyes, not the ducks</h3><p>Wildlife is wild. Watch from the shore and leave bread at home.</p></article>
+    <article><h3>Picnic under a willow</h3><p>Grab a bench or spread a blanket on the lawn. Pack out what you bring.</p></article>
+    <article><h3>Visit at golden hour</h3><p>Late light on the water makes this the best view of the Washington Monument's reflection.</p></article>
+    <article><h3>Pair it with a memorial</h3><p>The Vietnam Veterans Memorial and the Lincoln Memorial are a few minutes' walk west.</p></article>
+    <article><h3>Come in spring</h3><p>Cherry blossom season fills the Mall, and the gardens stay far less crowded than the Tidal Basin.</p></article>
+  </div>
+</section>
+
+<section id="visit" class="two">
+  <div>
+    <h2>Plan your visit</h2>
+    <p><strong>Location:</strong> Along Constitution Avenue NW, between 17th and 23rd Streets NW, Washington, DC.</p>
+    <p><strong>Getting there:</strong> The closest Metrorail stops are Foggy Bottom-GWU (Blue, Orange, Silver) and Smithsonian, each about a 15 to 20 minute walk. Parking on the Mall is very limited, so transit, biking, or the DC Circulator are easier.</p>
+    <p>Check current conditions, closures, and alerts before you go.</p>
+    <a class="btn" href="https://www.nps.gov/nama/" target="_blank" rel="noopener">National Park Service page</a>
+  </div>
+  <div>
+    <h3 style="font:600 1.25rem var(--serif);margin:0 0 .6rem">Steps away</h3>
+    <ul class="near">
+      <li>Vietnam Veterans Memorial <span>3 min walk</span></li>
+      <li>Lincoln Memorial <span>8 min walk</span></li>
+      <li>Reflecting Pool <span>5 min walk</span></li>
+      <li>World War II Memorial <span>10 min walk</span></li>
+      <li>Washington Monument <span>10 min walk</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>An independent concept site for Constitution Gardens. Walk times are approximate. For official information, see the National Park Service.</footer>
+</body>
+</html>
